@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Inducción para proveedores de EMOTIVA LTDA." />
+    <title>EMOTIVA LTDA | Inducción para proveedores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23083b70'/%3E%3Cpath d='M17 17h30v9H28v6h16v9H28v6h19v9H17z' fill='%2346d3db'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <span class="eyebrow">Sistema integrado de gestión</span>
+        <h1 class="brand"><img src="assets/emotiva-logo.png" alt="EMOTIVA LTDA" /></h1>
+        <p class="hero__title">Inducción para proveedores</p>
+        <p class="hero__meta"><i aria-hidden="true"></i> HSEQ · EMOTIVA LTDA</p>
+      </div>
+    </header>
+
+    <div class="sea-band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+    <main class="content">
+      <section aria-labelledby="bienvenida">
+        <h2 id="bienvenida">Bienvenido</h2>
+        <p class="intro">En esta página encontrarás las actividades que todo proveedor debe realizar antes de comenzar operaciones con EMOTIVA LTDA. Consulta la inducción, verifica que comprendes los lineamientos aplicables y completa la evaluación de conocimiento.</p>
+
+        <ol class="steps">
+          <li><b>1</b><span><strong>Visualice el video de inducción</strong> completo antes de avanzar.</span></li>
+          <li><b>2</b><span><strong>Consulte los requisitos principales</strong> relacionados con seguridad, cumplimiento y operación.</span></li>
+          <li><b>3</b><span><strong>Realice el examen</strong> para dejar constancia de la comprensión de la inducción.</span></li>
+          <li><b>4</b><span><strong>Recibirá un certificado</strong> en su correo al aprobar.</span></li>
+        </ol>
+      </section>
+
+      <section class="video-section" aria-labelledby="video-title">
+        <h2 id="video-title">Video de inducción</h2>
+        <div class="video-placeholder" id="videoPlayer" role="region" aria-label="Espacio reservado para el video de inducción">
+          <video id="inductionVideo" preload="metadata" playsinline>
+            <source src="assets/induccion-hseq.mp4" type="video/mp4" />
+            Tu navegador no admite la reproducción de este video.
+          </video>
+          <div class="video-controls">
+            <button id="playButton" class="control-button" type="button" aria-label="Reproducir inducción">▶</button>
+            <span id="timeText">0:00 / 0:00</span>
+            <span class="control-label">Video de inducción</span>
+          </div>
+        </div>
+        <div class="progress-label"><span>Avance del video</span><strong id="percentText">0%</strong></div>
+        <div id="progressBar" class="progress-bar" role="progressbar" aria-label="Avance del video" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="progress-bar__fill"></span>
+        </div>
+      </section>
+
+      <section aria-labelledby="lineamientos">
+        <h2 id="lineamientos">Antes de presentar el examen</h2>
+        <div class="guidelines">
+          <p>Verifique que conoce y acepta los lineamientos básicos para proveedores:</p>
+          <ul>
+            <li>Uso obligatorio de elementos de protección personal cuando aplique.</li>
+            <li>Cumplimiento de las normas de seguridad, salud en el trabajo y ambiente.</li>
+            <li>Ingreso únicamente a las áreas autorizadas y siguiendo las indicaciones del personal responsable.</li>
+            <li>Reporte oportuno de incidentes, condiciones inseguras o novedades operativas.</li>
+          </ul>
+          <label class="acceptance"><input id="acceptance" type="checkbox" /> <span>He leído, comprendo y acepto los lineamientos anteriores.</span></label>
+        </div>
+      </section>
+
+      <section class="exam-card" aria-labelledby="exam-title">
+        <h2 id="exam-title">Examen de inducción</h2>
+        <p>Ingrese al examen y complételo después de ver el video. La aprobación del examen puede ser requerida para continuar con el proceso de habilitación como proveedor.</p>
+        <button id="examButton" type="button" disabled>Complete el video y acepte los lineamientos</button>
+        <p id="examMessage" class="exam-message" aria-live="polite">El examen se habilitará al completar la inducción.</p>
+      </section>
+    </main>
+
+    <footer>EMOTIVA LTDA · Gestión segura y responsable</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
